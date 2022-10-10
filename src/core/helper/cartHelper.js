@@ -21,9 +21,10 @@ export const loadCart = () => {
     if(typeof window !== "undefined"){
         if(localStorage.getItem("cart")) {
             return JSON.parse(localStorage.getItem("cart"));
+        }else{
+            window.localStorage.setItem("cart",JSON.stringify([]))
+            return [];
         }
-    }else{
-        return [];
     }
 }
 
