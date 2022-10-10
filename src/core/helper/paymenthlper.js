@@ -15,7 +15,7 @@ export const getmeToken = (userId, token) => {
     }).catch(err=> console.log(err));
 }
 
-export const processPayement = (userId, token, paymentInfo) => {{
+export const processPayement = (userId, token, paymentInfo) => {
     return fetch(`${API}/payment/braintree/${userId}`,{
         method:"POST",
         headers: {
@@ -30,4 +30,4 @@ export const processPayement = (userId, token, paymentInfo) => {{
         }
     )
     .catch(err => console.log(err))
-}}
+}

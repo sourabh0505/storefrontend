@@ -1,8 +1,7 @@
 import DropIn from "braintree-web-drop-in-react";
-import React,{useState,useEffect, useCallback} from "react";
-import { Link } from "react-router-dom";
+import React,{useState,useEffect} from "react";
 import { isAuthenticated } from "../auth/helper";
-import { cartEmpty, loadCart } from "./helper/cartHelper";
+import { cartEmpty } from "./helper/cartHelper";
 import { createOrder } from "./helper/orderHelper";
 import { getmeToken, processPayement } from "./helper/paymenthlper";
 
@@ -50,12 +49,12 @@ const Payment = ({products, setReload = f => f, reload = undefined}) => {
 
     useEffect(() => {
         getToken(userId,token)
-    },[])
+    })
 
     const onPurchase = () => {
         setInfo({loading: true})
         let nonce;
-        let getNonce = info.instance
+        info.instance
         .requestPaymentMethod()
         .then(data => {
             nonce = data.nonce
@@ -91,6 +90,7 @@ const Payment = ({products, setReload = f => f, reload = undefined}) => {
         let amount = 0
         products.map(p => {
             amount = amount +p.price
+            return p;
         })
         return amount
     }

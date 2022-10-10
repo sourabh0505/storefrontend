@@ -1,9 +1,7 @@
-import React,{useState, useEffect, useSyncExternalStore} from 'react';
+import React,{useState, useEffect} from 'react';
 import "../styles.css";
-import { API } from '../backend';
 import Base from "./Base";
 import Card from './Card';
-import { getProducts } from './helper/coreapicalls';
 import { loadCart } from './helper/cartHelper';
 import Payment from './Payment';
 
@@ -34,13 +32,7 @@ const  Cart =() => {
             </div>
         )
     }
-    const loadCheckout =  () => {
-        return(
-            <div>
-                <h2>This section is for checkout</h2>
-            </div>
-        )
-    }
+    
 
     return (
         <Base title="Cart Page" description="Ready to checkout">

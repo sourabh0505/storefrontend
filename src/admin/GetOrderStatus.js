@@ -61,7 +61,7 @@ const GetOrderStatus = () => {
 
      useEffect(() =>{
         show(user,token)
-     },[])
+     })
 
      const myOrderStatusForm = () => (
         <fom>

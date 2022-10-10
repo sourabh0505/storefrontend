@@ -17,6 +17,7 @@ export default function Home() {
         getProducts().then(data => {
             if(data.error) {
                 setError(data.error);
+                console.log(error);
             }else{
                 //console.log(data);
                 setProducts(data);
@@ -25,7 +26,7 @@ export default function Home() {
     }
     useEffect(() =>{
         loadAllProduct();
-    },[])
+    })
 
     return (
         <Base title="Home Page" description="Welcome to the apna store">

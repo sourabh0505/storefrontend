@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import Base from "../core/Base"
-import {Link,Navigate} from "react-router-dom"
+import {Navigate} from "react-router-dom"
 
 import {signin,authenticate,isAuthenticated} from "../auth/helper"
 

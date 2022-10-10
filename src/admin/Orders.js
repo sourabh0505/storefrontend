@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { isAuthenticated } from "../auth/helper";
-import { API } from "../backend";
 
 import Base from "../core/Base";
-import { getOrders, updateOrderStatus } from "./helper/adminapicall";
+import { getOrders} from "./helper/adminapicall";
 
 
 
@@ -26,7 +25,7 @@ const Order = () => {
     }
     useEffect(()=>{
         preload()
-    },[])
+    })
 
     return (
         <Base title="Manage Orders" description="Here you can update or check status of Orders">

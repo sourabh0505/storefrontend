@@ -26,7 +26,7 @@ const UpdateCategory = () => {
     }
     useEffect(() => {
         preload(categoryId)
-    },[])
+    })
 
     const goBack = () => (
         <div className="mt-5">

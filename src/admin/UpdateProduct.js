@@ -25,7 +25,7 @@ const UpdateProduct = () => {
         formData:""
     })
 
-    const {name,description,price,stock,categories,category,loading,error,createdProduct,getaRedirect,formData}=values
+    const {name,description,price,stock,categories,createdProduct,getaRedirect,formData}=values
 
     const preload = (productId) => {
       getProduct(productId).then(data=>{
@@ -61,7 +61,7 @@ const UpdateProduct = () => {
 
     useEffect(()=>{
       preload(productId);
-    },[])
+    })
 
     const onSubmit = (event) => {
         event.preventDefault();

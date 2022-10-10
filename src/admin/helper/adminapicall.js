@@ -10,11 +10,9 @@ export const createCategory = (userId, token,category) => {
             Authorization:`Bearer ${token}`
         },
         body : JSON.stringify(category)
-    }).
-    then(response =>{
+    }).then(response =>{
         return response.json()
-    }).
-    catch(err=>console.log(err));
+    }).catch(err=>console.log(err));
 }
 
 //get all categories
