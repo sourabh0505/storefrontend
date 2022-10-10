@@ -25,7 +25,8 @@ const Order = () => {
     }
     useEffect(()=>{
         preload()
-    })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
 
     return (
         <Base title="Manage Orders" description="Here you can update or check status of Orders">

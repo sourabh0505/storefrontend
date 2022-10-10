@@ -61,7 +61,8 @@ const GetOrderStatus = () => {
 
      useEffect(() =>{
         show(user,token)
-     })
+           // eslint-disable-next-line react-hooks/exhaustive-deps
+     },[])
 
      const myOrderStatusForm = () => (
         <fom>

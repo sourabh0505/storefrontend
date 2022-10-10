@@ -26,7 +26,8 @@ const UpdateCategory = () => {
     }
     useEffect(() => {
         preload(categoryId)
-    })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
 
     const goBack = () => (
         <div className="mt-5">

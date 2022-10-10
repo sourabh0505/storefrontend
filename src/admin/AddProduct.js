@@ -25,7 +25,6 @@ const AddProduct = () => {
     })
 
     const {name,description,price,stock,categories,createdProduct,getaRedirect,formData}=values
-
     const preload = () => {
       getCategories().then(data=>{
         if(data.error) {
@@ -39,11 +38,13 @@ const AddProduct = () => {
 
     useEffect(()=>{
       preload();
-    })
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
 
     const onSubmit = (event) => {
         event.preventDefault();
         setValues({...values,error:"",loading: true})
+        console.log(formData)
         createaProduct(user._id,token,formData).then(data =>{
           if(data.error){
             setValues({...values,error:data.error})

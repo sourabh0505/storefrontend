@@ -61,7 +61,8 @@ const UpdateProduct = () => {
 
     useEffect(()=>{
       preload(productId);
-    })
+         // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
 
     const onSubmit = (event) => {
         event.preventDefault();
