@@ -1,6 +1,6 @@
 export const addItemToCart = (item,next) => {
     let cart = []
-    if(window) {
+    if(typeof window !==  "undefined") {
        // console.log(cart);
        //console.log(window.localStorage.getItem("cart"))
         if(window.localStorage.getItem("cart")) {
@@ -18,7 +18,7 @@ export const addItemToCart = (item,next) => {
 
 
 export const loadCart = () => {
-    if(window){
+    if(typeof window !== "undefined"){
         if(localStorage.getItem("cart")) {
             return JSON.parse(localStorage.getItem("cart"));
         }
@@ -27,7 +27,7 @@ export const loadCart = () => {
 
 export const removeItemFromCart = (productId) => {
     let cart = []
-    if(window) {
+    if(typeof window !==  "undefined") {
         // console.log(cart);
         //console.log(window.localStorage.getItem("cart"))
          if(window.localStorage.getItem("cart")) {
@@ -44,7 +44,7 @@ export const removeItemFromCart = (productId) => {
 }
 
 export const cartEmpty = next => {
-    if(window){
+    if(typeof window !== "undefined"){
         localStorage.removeItem("cart");
         let cart = []
         localStorage.setItem("cart",JSON.stringify(cart));
