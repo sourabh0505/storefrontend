@@ -49,7 +49,7 @@ const Payment = ({products, setReload = f => f, reload = undefined}) => {
 
     useEffect(() => {
         getToken(userId,token)
-    })
+    },[userId,token])
 
     const onPurchase = () => {
         setInfo({loading: true})
