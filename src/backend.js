@@ -1,1 +1,1 @@
-export const API = 'https://store-backend1.herokuapp.com/api/';
+export const API = 'https://store-backend-f7n6.onrender.com/api';
